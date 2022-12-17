@@ -28,8 +28,9 @@ public class ErrorHandler
 	for (FieldError error : errors) {
 	    String code = error.getCode();
 	    String fieldName = error.getField();
+	    String message = error.getDefaultMessage();
 	    CustomError customError = new CustomError(code,
-		    fieldName);
+		    fieldName, message);
 	    customErrors.add(customError);
 	}
 	return handleExceptionInternal(ex, customErrors,

@@ -43,6 +43,10 @@ public class Database {
 	return EVENTS.values();
     }
 
+    public static Event findOneEvent(Long id) {
+	return EVENTS.get(id);
+    }
+
     public static void saveLocation(Location location) {
 	locationId++;
 	location.setId(locationId);
@@ -51,10 +55,6 @@ public class Database {
 
     public static Collection<Location> findAllLocations() {
 	return LOCATIONS.values();
-    }
-
-    public static Event findOneEvent(Long id) {
-	return EVENTS.get(id);
     }
 
     public static Location findOneLocation(Long id) {
